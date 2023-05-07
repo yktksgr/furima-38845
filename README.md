@@ -15,7 +15,7 @@
 
 ### Association
 - has_many :items
-- has_many :purchase
+- has_many :purchases
 
 
 ## items テーブル
@@ -47,7 +47,7 @@
 ### Association
 - belongs_to :user
 - belongs_to :item
-- has_one : destinations
+- has_one : destination
 
 
 ##  destinations テーブル
