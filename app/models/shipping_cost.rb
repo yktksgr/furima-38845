@@ -1,8 +1,7 @@
 class ShippingCost < ActiveHash::Base
   self.data = [
-    { id: 1, name: 'Shipping Cost 1' },
-    { id: 2, name: 'Shipping Cost 2' },
-    { id: 3, name: 'Shipping Cost 3' },
-    # 別の配送料を追加する場合は、ここにデータを追加します
+    {id: nil, name: '---' }, 
+    {id: 1, name: '着払い(購入者負担)'},
+    {id: 2, name: '送料込み(出品者負担)'}
   ]
 end

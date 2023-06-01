@@ -1,8 +1,8 @@
 class ShippingDate < ActiveHash::Base
   self.data = [
-    { id: 1, name: 'Shipping Date 1' },
-    { id: 2, name: 'Shipping Date 2' },
-    { id: 3, name: 'Shipping Date 3' },
-    # 別の発送日数を追加する場合は、ここにデータを追加します
+    {id: nil, name: '---' }, 
+    {id: 1, name: '1〜2日で発送'},
+    {id: 2, name: '2〜3日で発送'}, 
+    {id: 3, name: '4〜7日で発送'}
   ]
 end
