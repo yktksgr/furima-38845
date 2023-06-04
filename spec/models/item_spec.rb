@@ -31,22 +31,27 @@ RSpec.describe Item, type: :model do
       it 'categoryが未選択だと出品できない' do
         @item.category_id = 1
         @item.valid?
+        expect(@item.errors.full_messages).to include("Category can't be blank")
       end
       it 'statusが未選択だと出品できない' do
         @item.status_id = 1
         @item.valid?
+        expect(@item.errors.full_messages).to include("Status can't be blank")
       end
       it 'shipping_costが未選択だと出品できない' do
         @item.shipping_cost_id = 1
         @item.valid?
+        expect(@item.errors.full_messages).to include("Shipping cost can't be blank")
       end
       it 'prefectureが未選択だと出品できない' do
         @item.prefecture_id = 1
         @item.valid?
+        expect(@item.errors.full_messages).to include("Prefecture can't be blank")
       end
       it 'shipping_dateが未選択だと出品できない' do
         @item.shipping_date_id = 1
         @item.valid?
+        expect(@item.errors.full_messages).to include("Shipping date can't be blank")
       end
       it 'priceが空だと出品できない' do
         @item.price = nil
