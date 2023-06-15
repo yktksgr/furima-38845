@@ -7,7 +7,7 @@ FactoryBot.define do
     city { Faker::Address.city }
     address { Faker::Address.street_address }
     building_name { Faker::Address.secondary_address }
-    phone_number { "0" + Faker::Number.number(digits: 10).to_s }
-    token {"tok_abcdefghijk00000000000000000"}
+    phone_number { '0' + Faker::Number.number(digits: 10).to_s }
+    token { 'tok_abcdefghijk00000000000000000' }
   end
 end
