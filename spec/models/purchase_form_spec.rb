@@ -55,6 +55,11 @@ RSpec.describe PurchaseForm, type: :model do
         @purchase_form.valid?
         expect(@purchase_form.errors.full_messages).to include("Item can't be blank")
       end
+        it "tokenが空では登録できないこと" do
+        @purchase_form.token = nil
+        @purchase_form.valid?
+        expect(@purchase_form.errors.full_messages).to include("Token can't be blank")
+      end
       it '郵便番号が空だと保存できないこと' do
         @purchase_form.postcode = nil
         @purchase_form.valid?
