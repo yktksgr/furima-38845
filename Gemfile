@@ -64,6 +64,8 @@ group :production do
   gem 'pg'
 end
 
+gem 'pry'
+
 gem 'devise'
 
 gem 'mini_magick'
