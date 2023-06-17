@@ -47,7 +47,7 @@ class ItemsController < ApplicationController
   end
 
   def check_user_ownership
-    redirect_to root_path if current_user.id == @item.user_id || @item.purchase.present?
+    redirect_to root_path unless current_user.id == @item.user_id && @item.purchase.nil?
   end
 
   def item_params
