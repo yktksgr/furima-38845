@@ -1,7 +1,5 @@
 FactoryBot.define do
   factory :purchase_form do
-    association :user
-    association :item
     postcode { Faker::Number.number(digits: 3).to_s + '-' + Faker::Number.number(digits: 4).to_s }
     prefecture_id { Faker::Number.between(from: 1, to: 47) }
     city { Faker::Address.city }
