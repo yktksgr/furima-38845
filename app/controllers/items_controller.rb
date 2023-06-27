@@ -9,6 +9,8 @@ class ItemsController < ApplicationController
 
   def show
     @user = @item.user
+    @comments = @item.comments.includes(:user)
+    @comment = Comment.new
   end
 
   def new
